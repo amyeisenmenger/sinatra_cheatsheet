@@ -3,10 +3,7 @@ require 'pry'
 
 def search(cmd)
   @command = cmd
-  case @command
-  when @command
-    @man_page = `man #{@command}`
-  end
+  @man_page = `man #{@command}`
 end
 
 get '/' do

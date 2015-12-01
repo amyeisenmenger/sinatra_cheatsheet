@@ -1,14 +1,18 @@
 <h1>****** Command Line ******</h1>
 <hr />
-<ol>
-  <% @cmd.each do |cmd| %>
-  <li>
-    <a href= <%="/command_result/#{cmd}" %>>
-      <%= cmd %> 
-    </a>
-  </li>
-  <% end %>
-</ol>
+<% if @cmd.any? %>
+  <ol>
+    <% @cmd.each do |cmd| %>
+    <li>
+      <a href= <%="/command_result/#{cmd}" %>>
+        <%= cmd %> 
+      </a>
+    </li>
+    <% end %>
+  </ol>
+<% else %>
+  <h3>Nothing found</h3>
+<% end %>
 
 <a href='/'>Main Menu</a>
 <a href='/search'>Search</a>

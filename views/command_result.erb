@@ -1,6 +1,10 @@
 <h1>****** Command Result ******</h1>
 <hr />
-<%= @man_page %>
+<% unless @man_page.empty? %>
+  <%= @man_page %>
+<% else %>
+  <h3>Nothing found</h3>
+<% end %>
 <br>
 
 <a href='/'>Main Menu</a>
