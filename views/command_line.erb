@@ -2,9 +2,8 @@
 <hr />
 <ol>
   <% @cmd.each do |cmd| %>
-  binding.pry
   <li>
-    <a href= <%='/command_result/#{cmd}' %>>
+    <a href= <%="/command_result/#{cmd}" %>>
       <%= cmd %> 
     </a>
   </li>
@@ -12,3 +11,4 @@
 </ol>
 
 <a href='/'>Main Menu</a>
+<a href='/search'>Search</a>
