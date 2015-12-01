@@ -1,0 +1,14 @@
+<h1>****** Command Line ******</h1>
+<hr />
+<ol>
+  <% @cmd.each do |cmd| %>
+  binding.pry
+  <li>
+    <a href= <%='/command_result/#{cmd}' %>>
+      <%= cmd %> 
+    </a>
+  </li>
+  <% end %>
+</ol>
+
+<a href='/'>Main Menu</a>
